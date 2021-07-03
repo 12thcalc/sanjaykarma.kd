@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Website</title>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="navbar">
+            <img src="Images/KARMA_DEVELOPERS_5_-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONNECT</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">DASHBOARD</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <p><span class="nethutext">&#128147 NETHU</span><br >JAGAME THANDHIRAN</p>
+                <img src="Images/play.png" id="leftplay">
+            </div>
+            <div class="right-col">
+                <p><span class="neethotext">&#128157 NEETHO</span><br >JAGAME THANDHIRAN</p>
+                <img src="Images/play.png" id="rightplay">
+            </div>
+            <div class="centertext">
+                <p><span class="tamiltext"> NETHU</span> <br><span class="xtext">X</span><br><span class="telugutext">NEETHO</span></p>
+            </div>
+            <div class="center-col">
+                <img src="Images/play.png" id="centerplay">
+            </div>
+        </div>
+    </div>
+    <audio id="neetho">
+        <source src="Music/telugu.mp3" type="audio/mp3">
+    </audio>
+    <audio id="nethu">
+        <source src="Music/tamil.mp3" type="audio/mp3">
+    </audio>
+    <audio id="tamitelu">
+        <source src="Music/tamil,telugu.mp3" type="audio/mp3">
+    </audio>
+<script>
+    var neetho = document.getElementById("neetho");
+    var rightplay = document.getElementById("rightplay");
+    rightplay.onclick = function(){
+        if(neetho.paused){
+            neetho.play();
+            rightplay.src ="Images/pause.png";
+        }else{
+            neetho.pause();
+            rightplay.src ="Images/play.png";
+        }
+    }
+
+    var nethu = document.getElementById("nethu");
+    var leftplay = document.getElementById("leftplay");
+    leftplay.onclick = function(){
+        if(nethu.paused){
+            nethu.play();
+            leftplay.src ="Images/pause.png";
+        }else{
+            nethu.pause();
+            leftplay.src ="Images/play.png";
+        }
+    }
+    var tamitelu = document.getElementById("tamitelu");
+    var centerplay = document.getElementById("centerplay");
+    centerplay.onclick = function(){
+        if(tamitelu.paused){
+            tamitelu.play();
+            centerplay.src ="Images/pause.png";
+        }else{
+            tamitelu.pause();
+            centerplay.src ="Images/play.png";
+        }
+    }
+</script>
+</body>
+</html>
